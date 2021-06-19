@@ -1,1 +1,5 @@
 # created by virtualenv automatically
+.history
+__pycache__
+venv
+

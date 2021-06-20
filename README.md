@@ -2,7 +2,7 @@
 Python - Flask's web application
 
 
-This web app is published to Heruku for testing purposes.
+This web app is published to HerokuApp for testing purposes.
 You may access it on the following link:
 https://python-notes-web-app.herokuapp.com/
 

@@ -24,8 +24,6 @@ def login():
             print("Email doesn't have @")
         elif len(password) < 7:
             flash("Password should be greater than 7 characters", category="error")
-        # elif password1 != password2:
-        #     flash("Passwords are not identical", category="error")
         else:
             user = User.query.filter_by(email=email).first()
             if user:
@@ -50,11 +48,7 @@ def login():
     else:
         print("This was a get request")
 
-        # print(f"Email: {email}\nPassword: {password}")
-
-        # print("Active")
-
-    return render_template("login.html")
+    return render_template("login.html", user=current_user)
 
 
 @auth.route("logout")
@@ -106,8 +100,6 @@ def sign_up():
                 )
 
                 flash("User account was created successfully", category="success")
-                login_user(user, remember=True)
+                login_user(new_user, remember=True)
                 return redirect(url_for("views.home"))
-        # print(form_data)
-        # print("That was a post request")
-    return render_template("sign_up.html")
+    return render_template("sign_up.html", user=current_user)

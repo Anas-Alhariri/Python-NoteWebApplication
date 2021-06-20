@@ -5,6 +5,7 @@ from flask_login import LoginManager
 
 #!! Initiating an object from the "SQLALCHEMY" class:
 db = SQLAlchemy()
+
 #!! Storing the name of our database file in a constant variable to be used later to build our database connection string:
 DB_NAME = "database.db"
 
